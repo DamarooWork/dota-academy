@@ -1,5 +1,7 @@
 export { Toaster } from './sonner'
 export { Button } from './button'
 export { DropdownMenu, DropdownMenuTrigger } from './dropdown-menu'
+export { PricingComponent } from './pricing-cards'
 export * from './tooltip'
 export * from './carousel'
+export {SingularityShaders} from './shadcn-io/singularity-shaders'

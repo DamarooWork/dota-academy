@@ -35,7 +35,7 @@ const rewiewsArr = [
 ]
 export function Rewiews() {
   return (
-    <section id="rewiews" className='mt-8'>
+    <section id="rewiews" className='py-8'>
       <h2 className="text-5xl font-bold text-center mb-8 text-primary">Отзывы</h2>
       <Carousel
         plugins={[
