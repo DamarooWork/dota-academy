@@ -1,3 +1,5 @@
 export { Toaster } from './sonner'
 export { Button } from './button'
 export { DropdownMenu, DropdownMenuTrigger } from './dropdown-menu'
+export * from './tooltip'
+export * from './carousel'

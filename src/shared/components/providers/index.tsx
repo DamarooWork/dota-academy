@@ -10,7 +10,7 @@ export function Providers({ children }: Props) {
   return (
     <ThemeProvider>
         <NextTopLoader
-          color={'oklch(58.5% 0.233 277.117)'}
+          color={'oklch(0.541 0.281 293.009)'}
           showSpinner={false}
         />
         <Toaster richColors />

@@ -1,4 +1,4 @@
-import { ThemeSelector } from '@/widgets'
+import { TooltipWidget } from '@/widgets'
 import { cn } from '@/shared/lib/utils'
 interface Props {
   className?: string
@@ -12,7 +12,9 @@ export function Footer({ className }: Props) {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        Footer
+        <TooltipWidget label="Это подсказка" side="top" align="start">
+          <h2 className="text-4xl font-bold">Footer</h2>
+        </TooltipWidget>
       </div>
     </footer>
   )

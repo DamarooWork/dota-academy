@@ -11,7 +11,7 @@ interface Props {
 export function ScrollSmootherProvider({ children }: Props) {
   useGSAP(() => {
     ScrollSmoother.create({
-      smooth: 0.5,
+      smooth: 1,
     })
   }, [])
   return (

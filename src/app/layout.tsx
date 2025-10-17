@@ -7,7 +7,7 @@ import { ScrollSmootherProvider } from '@/shared/components/providers/scroll-smo
 import { Container } from '@/shared/components'
 const caveat = Caveat({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400'],
 })
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function RootLayout({
           <Header />
           <ScrollSmootherProvider>
             <Container className="flex-1 min-h-screen pt-20">
-              <main>{children}</main>
+              <main className="flex flex-col">{children}</main>
             </Container>
             <Footer />
           </ScrollSmootherProvider>
