@@ -1,15 +1,16 @@
-"use client";
+'use client'
 
-import React, { forwardRef } from "react";
-import { Shader } from "react-shaders";
-import { cn } from "@/shared/lib/utils";
+import React, { forwardRef } from 'react'
+import { Shader } from 'react-shaders'
+import { cn } from '@/shared/lib/utils'
 
-export interface SingularityShadersProps extends React.HTMLAttributes<HTMLDivElement> {
-  speed?: number;
-  intensity?: number;
-  size?: number;
-  waveStrength?: number;
-  colorShift?: number;
+export interface SingularityShadersProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  speed?: number
+  intensity?: number
+  size?: number
+  waveStrength?: number
+  colorShift?: number
 }
 
 const fragmentShader = `
@@ -42,36 +43,39 @@ void mainImage(out vec4 O, vec2 F)
                    * u_intensity
              );
 }
-`;
+`
 
-export const SingularityShaders = forwardRef<HTMLDivElement, SingularityShadersProps>(({
-  className,
-  speed = 1.0,
-  intensity = 1.0,
-  size = 1.0,
-  waveStrength = 1.0,
-  colorShift = 1.0,
-  ...props
-}, ref) => {
-  return (
-    <div
-      ref={ref}
-      className={cn('w-full h-full', className)}
-      {...props}
-    >
-      <Shader
-        fs={fragmentShader}
-        uniforms={{
-          u_speed: { type: '1f', value: speed },
-          u_intensity: { type: '1f', value: intensity },
-          u_size: { type: '1f', value: size },
-          u_waveStrength: { type: '1f', value: waveStrength },
-          u_colorShift: { type: '1f', value: colorShift },
-        }}
-        style={{ width: '100%', height: '100%' } as CSSStyleDeclaration}
-      />
-    </div>
-  );
-});
+export const SingularityShaders = forwardRef<
+  HTMLDivElement,
+  SingularityShadersProps
+>(
+  (
+    {
+      className,
+      speed = 1.0,
+      intensity = 1.0,
+      size = 1.0,
+      waveStrength = 1.0,
+      colorShift = 1.0,
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <div ref={ref} className={cn('w-full h-full', className)} {...props}>
+        <Shader
+          fs={fragmentShader}
+          uniforms={{
+            u_speed: { type: '1f', value: speed },
+            u_intensity: { type: '1f', value: intensity },
+            u_size: { type: '1f', value: size },
+            u_waveStrength: { type: '1f', value: waveStrength },
+            u_colorShift: { type: '1f', value: colorShift },
+          }}
+        />
+      </div>
+    )
+  }
+)
 
-SingularityShaders.displayName = "SingularityShaders";
+SingularityShaders.displayName = 'SingularityShaders'
