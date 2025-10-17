@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Button } from "@/shared/ui";
 
 export const PricingComponent = () => {
-  const [selectedPlan, setSelectedPlan] = useState("basic");
   
   const plans = [
     { id: "basic", name: "Basic", price: 29 },

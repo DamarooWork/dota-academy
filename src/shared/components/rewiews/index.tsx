@@ -1,5 +1,5 @@
 'use client'
-import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui'
+import { Carousel, CarouselContent } from '@/shared/ui'
 import Autoscroll from 'embla-carousel-auto-scroll'
 import Autoplay from 'embla-carousel-autoplay'
 import RewiewItem from './rewiew-item'

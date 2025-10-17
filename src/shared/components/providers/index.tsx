@@ -2,7 +2,6 @@
 import { ThemeProvider } from './theme-provider'
 import { Toaster } from '@/shared/ui'
 import NextTopLoader from 'nextjs-toploader'
-import { ScrollSmootherProvider } from './scroll-smoother'
 interface Props {
   children: React.ReactNode
 }

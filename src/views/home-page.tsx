@@ -1,9 +1,7 @@
 import { Rewiews } from '@/shared/components'
 import { PricingComponent } from '@/shared/ui'
 
-
-interface HomePageProps {}
-export function HomePage({}: HomePageProps) {
+export function HomePage() {
   return (
     <>
       <Rewiews />
