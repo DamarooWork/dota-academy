@@ -1,26 +1,31 @@
 'use client'
-import { useState } from "react";
-import { Button } from "@/shared/ui";
+import { useState } from 'react'
+import { Button } from '@/shared/ui'
 
 export const PricingComponent = () => {
-  
   const plans = [
-    { id: "basic", name: "Basic", price: 29 },
-    { id: "pro", name: "Pro", price: 59 },
-    { id: "enterprise", name: "Enterprise", price: 99 }
-  ];
+    { id: 'basic', name: 'Basic', price: 29 },
+    { id: 'pro', name: 'Pro', price: 59 },
+    { id: 'enterprise', name: 'Enterprise', price: 99 },
+  ]
 
   return (
-    <div className="grid gap-4 md:grid-cols-3">
-      {plans.map((plan) => (
-        <div key={plan.id} className="rounded-lg border p-6">
-          <h3 className="text-xl font-semibold">{plan.name}</h3>
-          <div className="text-3xl font-bold">${plan.price}/mo</div>
-          <Button className="w-full mt-4">
-            Choose Plan
-          </Button>
-        </div>
-      ))}
-    </div>
-  );
-};
+    <section>
+      <h2
+        id="prices"
+        className="text-5xl font-bold text-center mb-8 text-primary"
+      >
+        Цены
+      </h2>
+      <div className="grid gap-4 md:grid-cols-3">
+        {plans.map((plan) => (
+          <div key={plan.id} className="rounded-lg border p-6">
+            <h3 className="text-xl font-semibold">{plan.name}</h3>
+            <div className="text-3xl font-bold">${plan.price}/mo</div>
+            <Button className="w-full mt-4">Choose Plan</Button>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
