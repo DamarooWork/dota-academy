@@ -1,12 +1,10 @@
-import { Rewiews } from '@/shared/components'
-import { PricingComponent } from '@/shared/ui'
+import { Rewiews, Prices } from '@/shared/components'
 
 export function HomePage() {
   return (
     <>
+      <Prices />
       <Rewiews />
-  
-      <PricingComponent />
     </>
   )
 }

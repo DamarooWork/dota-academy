@@ -24,7 +24,7 @@ export function Navigation() {
   function handleLinkClick(link: string) {
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: link, offsetY: 80 },
+      scrollTo: { y: link, offsetY: 100 },
       ease: 'power2.inOut',
     })
   }

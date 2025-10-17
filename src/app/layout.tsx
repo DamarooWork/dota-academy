@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Great_Vibes } from 'next/font/google'
+import { Cormorant_Infant } from 'next/font/google'
 import './globals.css'
 import { Providers } from '@/shared/components/providers'
 import { Header, Footer } from '@/widgets'
 import { ScrollSmootherProvider } from '@/shared/components/providers/scroll-smoother'
 import { Container } from '@/shared/components'
 import { SingularityShaders } from '@/shared/ui'
-const caveat = Great_Vibes({
+const caveat = Cormorant_Infant({
   subsets: ['latin'],
   weight: ['400'],
 })
@@ -36,7 +36,7 @@ export default function RootLayout({
               size={1.3}
               waveStrength={0.5}
               colorShift={2}
-              className="absolute  inset-0  -z-10"
+              className="absolute inset-0 -z-10"
             />
             <main className="flex-1 min-h-screen pt-20">
               <Container className="flex flex-col">{children}</Container>
