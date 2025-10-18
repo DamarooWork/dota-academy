@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Cormorant_Infant } from 'next/font/google'
 import './globals.css'
 import { Providers } from '@/shared/components/providers'
-import { Header, Footer } from '@/widgets'
+import { Header, Footer, ScrollButton } from '@/widgets'
 import { ScrollSmootherProvider } from '@/shared/components/providers/scroll-smoother'
 import { Container } from '@/shared/components'
 import { SingularityShaders } from '@/shared/ui'
@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <link rel="icon/jpg" href="icon.jpg" />
       </head>
-      <body className={`${caveat.className} antialiased `}>
+      <body className={`${caveat.className} antialiased relative min-h-screen`}>
         <Providers>
           <Header />
           <ScrollSmootherProvider>
@@ -38,12 +38,13 @@ export default function RootLayout({
               colorShift={2}
               className="absolute inset-0 -z-10"
             />
-            <main className="flex-1 min-h-screen pt-20">
+            <main className="flex-1 pt-20">
               <Container className="flex flex-col">{children}</Container>
             </main>
             <Footer />
           </ScrollSmootherProvider>
         </Providers>
+        <ScrollButton />
       </body>
     </html>
   )

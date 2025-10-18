@@ -10,3 +10,12 @@ export interface Rewiew {
   name: string
   rewiew: string
 }
+export interface IHashLink {
+  hash: string
+  title: string
+}
+export interface ISocialMediaLink {
+  id: string
+  url: string
+  network?: string
+}

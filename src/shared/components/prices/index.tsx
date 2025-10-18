@@ -37,7 +37,7 @@ export const Prices = () => {
 
   return (
     <section className="flex items-center flex-col">
-      <SectionTitle title="Цены" id="prices" />
+      <SectionTitle title="Тарифы" id="prices" />
       <div className="grid gap-8 md:grid-cols-2  xl:w-1/2 mt-8">
         {plans.map((plan) => (
           <PriceCard plan={plan} key={plan.id} />
