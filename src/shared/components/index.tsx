@@ -3,3 +3,4 @@
  export { SectionTitle } from './section-title'
 export { Prices } from './prices'
 export { NavLinksWithScroll } from './nav-links-with-scroll'
+export { Curtain } from './curtain'

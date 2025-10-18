@@ -3,10 +3,14 @@ import { useState, useEffect } from 'react'
 import { ChevronUp } from 'lucide-react'
 import { Button } from '@/shared/ui'
 import { Container } from '@/shared/components'
+import { usePathname } from 'next/navigation'
 
 export function ScrollButton() {
   const [isVisible, setIsVisible] = useState(false)
-
+  const pathname = usePathname()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
   useEffect(() => {
     const toggleVisibility = () => {
       const scrollTop = window.pageYOffset
@@ -29,14 +33,12 @@ export function ScrollButton() {
   }
 
   return (
-    <Container>
-      <Button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 z-50 size-12 rounded-full shadow-xs hover:shadow-sm shadow-foreground border-border transition-all duration-300 hover:scale-110 active:scale-95 will-change-transform"
-        aria-label="Scroll to top of page"
-      >
-        <ChevronUp className="size-6" />
-      </Button>
-    </Container>
+    <Button
+      onClick={scrollToTop}
+      className="fixed bottom-8 right-8 z-50 size-12 rounded-full shadow-xs hover:shadow-sm shadow-foreground border-border transition-all duration-300 hover:scale-110 active:scale-95 will-change-transform"
+      aria-label="Scroll to top of page"
+    >
+      <ChevronUp className="size-6" />
+    </Button>
   )
 }

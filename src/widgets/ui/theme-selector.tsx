@@ -12,7 +12,7 @@ export function ThemeSelector() {
   }
   return (
     <Button
-      className="size-12 rounded-xl motion-preset-focus motion-delay-300"
+      className="size-12 rounded-xl  motion-preset-focus motion-delay-2100"
       onClick={handleClick}
       variant="outline"
       size="icon"

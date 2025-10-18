@@ -4,7 +4,7 @@ import './globals.css'
 import { Providers } from '@/shared/components/providers'
 import { Header, Footer, ScrollButton } from '@/widgets'
 import { ScrollSmootherProvider } from '@/shared/components/providers/scroll-smoother'
-import { Container } from '@/shared/components'
+import { Container, Curtain } from '@/shared/components'
 import { SingularityShaders } from '@/shared/ui'
 const caveat = Cormorant_Infant({
   subsets: ['latin'],
@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <link rel="icon/jpg" href="icon.jpg" />
       </head>
-      <body className={`${caveat.className} antialiased relative min-h-screen`}>
+      <body className={`${caveat.className} antialiased relative min-h-screen scrollbar`}>
         <Providers>
           <Header />
           <ScrollSmootherProvider>
@@ -45,6 +45,7 @@ export default function RootLayout({
           </ScrollSmootherProvider>
         </Providers>
         <ScrollButton />
+        <Curtain />
       </body>
     </html>
   )

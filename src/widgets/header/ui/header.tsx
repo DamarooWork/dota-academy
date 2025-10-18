@@ -22,7 +22,7 @@ export function Header({ className }: Props) {
       <Container className="flex items-center justify-between h-full text-2xl font-bold">
         <Link
           href={'/'}
-          className={`${caveat.className} text-3xl mr-16 text-center motion-preset-focus motion-delay-300`}
+          className={`${caveat.className} text-3xl mr-16 text-center motion-preset-focus motion-delay-2100`}
         >
           Damaroo Dota Academy
         </Link>
