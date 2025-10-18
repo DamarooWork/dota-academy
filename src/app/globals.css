@@ -1,11 +1,11 @@
 @import 'tailwindcss';
-
 @import 'tw-animate-css';
+@plugin "tailwindcss-motion";
+@plugin "tailwindcss-intersect";
 html,
 body,
 :root {
   height: 100%;
- 
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -124,3 +124,5 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+

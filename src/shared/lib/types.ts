@@ -1,11 +1,11 @@
-export interface Plan {
+export interface IPlan {
   id: string
   name: string
   price: number
   discount: number
   plan: string[]
 }
-export interface Rewiew {
+export interface IRewiew {
   id: number
   name: string
   rewiew: string

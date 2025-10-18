@@ -3,9 +3,9 @@ import { Carousel, CarouselContent } from '@/shared/ui'
 import Autoscroll from 'embla-carousel-auto-scroll'
 import Autoplay from 'embla-carousel-autoplay'
 import RewiewItem from './rewiew-item'
-import { Rewiew } from '@/shared/lib/types'
+import { IRewiew } from '@/shared/lib/types'
 interface RewiewCarouselProps {
-  rewiews: Rewiew[]
+  rewiews: IRewiew[]
   direction?: 'ltr' | 'rtl'
 }
 export function RewiewCarousel({
@@ -28,7 +28,7 @@ export function RewiewCarousel({
         loop: true,
         direction,
       }}
-      className="-mx-4 2xl:mx-0"
+      className="-mx-4 2xl:mx-0  intersect-once intersect:motion-preset-slide-up motion-delay-500"
     >
       <CarouselContent dir={direction}>
         {rewiews.map((rewiew) => {

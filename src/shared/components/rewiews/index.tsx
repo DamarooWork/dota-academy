@@ -1,105 +1,19 @@
+import { rewiews } from '@/shared/lib/data'
 import { SectionTitle } from '../section-title'
 import { RewiewCarousel } from './rewiew-carousel'
 
-const rewiewsArr = [
-  {
-    id: 1,
-    name: 'Александр',
-    rewiew:
-      'Занятия было классное, очень полезное. Мы разобрали игры на антимаге',
-  },
-  {
-    id: 2,
-    name: 'Арсений',
-    rewiew:
-      'Занятия было классное, очень полезное. Мы разобрали игры на террорблейде',
-  },
-  {
-    id: 3,
-    name: 'Сергей',
-    rewiew: 'Занятия было классное, очень полезное. Мы разобрали игры на морфе',
-  },
-  {
-    id: 4,
-    name: 'Евгений',
-    rewiew: 'Занятия было классное, очень полезное. Мы разобрали игры на pudge',
-  },
-  {
-    id: 5,
-    name: 'Александр',
-    rewiew:
-      'Занятия было классное, очень полезное. Мы разобрали игры на тролле',
-  },
-  {
-    id: 6,
-    name: 'Александр',
-    rewiew:
-      'Занятия было классное, очень полезное. Мы разобрали игры на антимаге',
-  },
-  {
-    id: 7,
-    name: 'Арсений',
-    rewiew:
-      'Занятия было классное, очень полезное. Мы разобрали игры на террорблейде',
-  },
-  {
-    id: 8,
-    name: 'Сергей',
-    rewiew: 'Занятия было классное, очень полезное. Мы разобрали игры на морфе',
-  },
-  {
-    id: 9,
-    name: 'Евгений',
-    rewiew: 'Занятия было классное, очень полезное. Мы разобрали игры на pudge',
-  },
-  {
-    id: 10,
-    name: 'Александр',
-    rewiew:
-      'Занятия было классное, очень полезное. Мы разобрали игры на тролле',
-  },
-  {
-    id: 11,
-    name: 'Александр',
-    rewiew:
-      'Занятия было классное, очень полезное. Мы разобрали игры на антимаге',
-  },
-  {
-    id: 12,
-    name: 'Арсений',
-    rewiew:
-      'Занятия было классное, очень полезное. Мы разобрали игры на террорблейде',
-  },
-  {
-    id: 13,
-    name: 'Сергей',
-    rewiew: 'Занятия было классное, очень полезное. Мы разобрали игры на морфе',
-  },
-  {
-    id: 14,
-    name: 'Евгений',
-    rewiew: 'Занятия было классное, очень полезное. Мы разобрали игры на pudge',
-  },
-  {
-    id: 15,
-    name: 'Александр',
-    rewiew:
-      'Занятия было классное, очень полезное. Мы разобрали игры на тролле',
-  },
-]
+
 export function Rewiews() {
-  const total = rewiewsArr.length
-  const third = Math.ceil(total / 3)
+  const third = Math.ceil(rewiews.length / 3)
   return (
     <section className="py-8">
       <SectionTitle title="Отзывы" id="rewiews" />
-
-      <RewiewCarousel rewiews={rewiewsArr.slice(0, third)} />
+      <RewiewCarousel rewiews={rewiews.slice(0, third)} />
       <RewiewCarousel
-        rewiews={rewiewsArr.slice(third, third * 2)}
+        rewiews={rewiews.slice(third, third * 2)}
         direction="rtl"
       />
-      <RewiewCarousel rewiews={rewiewsArr.slice(third * 2)} />
+      <RewiewCarousel rewiews={rewiews.slice(third * 2)} />
     </section>
   )
 }

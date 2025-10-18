@@ -3,21 +3,10 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import { useRef } from 'react'
-import { IHashLink } from '../lib/types'
+import { hashLinks } from '@/shared/lib/data'
 gsap.registerPlugin(useGSAP, ScrollToPlugin)
 
-
-const linksArr: IHashLink[] = [
-  {
-    hash: '#prices',
-    title: 'Тарифы',
-  },
-  {
-    hash: '#rewiews',
-    title: 'Отзывы',
-  },
-]
-export  function  NavLinksWithScroll(){
+export function NavLinksWithScroll() {
   const refLinks = useRef<HTMLButtonElement[]>([])
   function handleLinkClick(link: string) {
     gsap.to(window, {
@@ -28,7 +17,7 @@ export  function  NavLinksWithScroll(){
   }
   return (
     <>
-       {linksArr.map((link, i) => {
+      {hashLinks.map((link, i) => {
         return (
           <a key={link.hash}>
             <button

@@ -12,7 +12,7 @@ export function SectionTitle({ className, title, id }: Props) {
   return (
     <h2
       id={id}
-      className={`${caveat.className} text-5xl font-bold text-center my-8`}
+      className={`${caveat.className} text-5xl font-bold text-center my-8 intersect-once intersect:motion-preset-slide-up motion-delay-300`}
     >
       {title}
     </h2>
