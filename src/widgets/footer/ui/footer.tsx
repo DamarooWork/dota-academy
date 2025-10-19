@@ -5,7 +5,7 @@ import { SocialMediaLinks } from './social-media-links'
 
 export function Footer() {
   return (
-    <footer className="flex items-center justify-between min-h-40 mt-16 bg-background/50 dark:bg-background/80 border-border border-t-1 py-8 ">
+    <footer className="flex items-center justify-between min-h-40 mt-8 md:mt-16 bg-background/50 dark:bg-background/80 border-border border-t-1 py-8 ">
       <Container className="flex flex-col gap-8">
         <div className="flex flex-col gap-2 intersect-once intersect:motion-preset-slide-up motion-delay-300">
           <p className="text-5xl font-bold ">ОСТАЛИСЬ ВОПРОСЫ?</p>

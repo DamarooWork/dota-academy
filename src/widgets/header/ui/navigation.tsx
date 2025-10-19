@@ -1,8 +1,11 @@
 import { NavLinksWithScroll } from '@/shared/components'
-
-export function Navigation() {
+import { cn } from '@/shared/lib/utils'
+interface NavigationProps {
+  className?: string
+}
+export function Navigation( {className}: NavigationProps) {
   return (
-    <nav className="flex flex-1 items-center gap-8 mr-4 motion-preset-focus motion-delay-2100">
+    <nav className={cn(className, 'flex  items-center gap-4 md:gap-8 ')}>
       <NavLinksWithScroll />
     </nav>
   )

@@ -3,8 +3,11 @@ import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 import { Button } from '@/shared/ui'
-
-export function ThemeSelector() {
+import { cn } from '@/shared/lib/utils'
+interface ThemeSelectorProps {
+  className?: string
+}
+export function ThemeSelector( {className}: ThemeSelectorProps) {
   const { setTheme, theme } = useTheme()
 
   function handleClick() {
@@ -12,7 +15,7 @@ export function ThemeSelector() {
   }
   return (
     <Button
-      className="size-12 rounded-xl  motion-preset-focus motion-delay-2100"
+      className={cn('size-12 rounded-xl', className)}
       onClick={handleClick}
       variant="outline"
       size="icon"
