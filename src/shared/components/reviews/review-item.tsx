@@ -13,21 +13,12 @@ interface ReviewItemProps {
 export default function ReviewItem({ review }: ReviewItemProps) {
   const { onOpen, isOpen, data, onClose, type } = useModalStore()
   const handleOpenModal = () => {
-    console.log(isOpen)
-
-    const isReviewOpen =
-      isOpen && type === ModalType.REVIEW_MODAL && data.review?.id === review.id
-
-    if (isReviewOpen) {
-      onClose()
-      return
-    }
     onOpen(ModalType.REVIEW_MODAL, { review })
   }
   return (
     <CarouselItem
       onClick={handleOpenModal}
-      className={`${bad_Script.className} md:basis-1/2 lg:basis-1/3 flex flex-col items-center justify-evenly  h-40 border-2 rounded-2xl border-border   m-4 p-4  shadow-md shadow-primary bg-background/75 overflow-hidden cursor-pointer `}
+      className={`${bad_Script.className} basis-1/2 lg:basis-1/3 flex flex-col items-center justify-evenly  h-40 border-2 rounded-2xl border-border   m-4 p-4  shadow-md shadow-primary bg-background/75 overflow-hidden cursor-pointer `}
     >
       <p className="text-2xl font-bold">{review.name}</p>
       <p className={` text-xl text-center  line-clamp-3`}>{review.content}</p>
