@@ -1,4 +1,4 @@
-import { IHashLink } from "../types";
+import { IHashLink } from '../types'
 
 export const hashLinks: IHashLink[] = [
   {
@@ -6,7 +6,7 @@ export const hashLinks: IHashLink[] = [
     title: 'Тарифы',
   },
   {
-    hash: '#rewiews',
+    hash: '#reviews',
     title: 'Отзывы',
   },
 ]

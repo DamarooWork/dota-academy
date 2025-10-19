@@ -5,10 +5,11 @@ export interface IPlan {
   discount: number
   plan: string[]
 }
-export interface IRewiew {
+export interface IReview {
   id: number
   name: string
-  rewiew: string
+  content: string
+  tgLink?: string
 }
 export interface IHashLink {
   hash: string

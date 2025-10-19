@@ -1,0 +1,1 @@
+export { useModalStore, ModalType } from './modals-store'

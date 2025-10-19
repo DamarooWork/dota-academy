@@ -12,7 +12,7 @@ export function Footer() {
           <p className="text-5xl font-bold ">ЗАДАЙ ИХ В МНЕ TG!</p>
           <Button
             size={`lg`}
-            className="self-start mt-4 text-4xl rounded-3xl font-bold py-8 hover:scale-102 active:scale-98 transition-all duration-300 will-change-transform slide-up-intersect"
+            className="self-start mt-4 text-4xl rounded-3xl font-bold py-8  slide-up-intersect"
           >
             <Link href={`https://t.me/damaroo_coach`} target="_blank">
               СПРОСИТЬ!

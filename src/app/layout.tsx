@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <link rel="icon/jpg" href="icon.jpg" />
       </head>
-      <body className={`${caveat.className} antialiased relative min-h-screen scrollbar`}>
+      <body className={`${caveat.className} antialiased relative scrollbar`}>
         <Providers>
           <Header />
           <ScrollSmootherProvider>

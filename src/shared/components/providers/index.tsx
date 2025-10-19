@@ -3,6 +3,7 @@ import { ThemeProvider } from './theme-provider'
 import { Toaster } from '@/shared/ui'
 import NextTopLoader from 'nextjs-toploader'
 import ObserverProvider from './observer-provider'
+import { ModalsProvider } from './modals-provider'
 interface Props {
   children: React.ReactNode
 }
@@ -16,6 +17,7 @@ export function Providers({ children }: Props) {
         />
         <Toaster richColors />
         {children}
+        <ModalsProvider />
       </ThemeProvider>
     </ObserverProvider>
   )

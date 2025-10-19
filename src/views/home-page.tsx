@@ -1,10 +1,10 @@
-import { Rewiews, Prices } from '@/shared/components'
+import { Reviews, Prices } from '@/shared/components'
 
 export function HomePage() {
   return (
     <>
       <Prices />
-      <Rewiews />
+      <Reviews />
     </>
   )
 }

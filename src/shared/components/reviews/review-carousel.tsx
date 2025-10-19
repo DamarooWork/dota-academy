@@ -2,16 +2,16 @@
 import { Carousel, CarouselContent } from '@/shared/ui'
 import Autoscroll from 'embla-carousel-auto-scroll'
 import Autoplay from 'embla-carousel-autoplay'
-import RewiewItem from './rewiew-item'
-import { IRewiew } from '@/shared/lib/types'
-interface RewiewCarouselProps {
-  rewiews: IRewiew[]
+import ReviewItem from './review-item'
+import { IReview } from '@/shared/lib/types'
+interface ReviewCarouselProps {
+  reviews: IReview[]
   direction?: 'ltr' | 'rtl'
 }
-export function RewiewCarousel({
-  rewiews,
+export function ReviewCarousel({
+  reviews,
   direction = 'ltr',
-}: RewiewCarouselProps) {
+}: ReviewCarouselProps) {
   return (
     <Carousel
       plugins={[
@@ -20,25 +20,19 @@ export function RewiewCarousel({
           stopOnInteraction: false,
         }),
         Autoplay({
-          delay: 2000,
-          stopOnInteraction: true,
+          delay: 1000,
         }),
       ]}
       opts={{
         loop: true,
         direction,
+        align: 'start'
       }}
       className="-mx-4 2xl:mx-0  intersect-once intersect:motion-preset-slide-up motion-delay-500"
     >
       <CarouselContent dir={direction}>
-        {rewiews.map((rewiew) => {
-          return (
-            <RewiewItem
-              key={rewiew.id}
-              name={rewiew.name}
-              rewiew={rewiew.rewiew}
-            />
-          )
+        {reviews.map((review) => {
+          return <ReviewItem key={review.id} review={review} />
         })}
       </CarouselContent>
     </Carousel>
