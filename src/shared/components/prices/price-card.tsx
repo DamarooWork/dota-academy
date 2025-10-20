@@ -7,7 +7,7 @@ interface PriceCardProps {
 }
 export function PriceCard({ plan }: PriceCardProps) {
   return (
-    <div className="group rounded-lg flex flex-col border-border border-2 shadow-md shadow-primary bg-background/75 p-4 relative  xl:hover:scale-105 transition-all duration-300 will-change-transform  intersect-once intersect:motion-preset-slide-up motion-delay-300">
+    <div className="group rounded-lg flex flex-col border-border border-2 shadow-md shadow-primary bg-background/75 p-4 relative  xl:hover:scale-105 transition-all duration-300 will-change-transform intersect-once intersect:motion-preset-slide-up motion-delay-300">
       <h3 className="text-3xl font-semibold text-center">{plan.name}</h3>
       <div className="text-2xl font-bold text-center">{plan.price}₽</div>
       <div className="flex-1">

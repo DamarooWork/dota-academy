@@ -48,7 +48,7 @@ export function Header({ className }: Props) {
       <Container className="flex items-center justify-between h-full text-2xl font-bold">
         <Link
           href={'/'}
-          className={`${caveat.className}  lg:text-3xl md:mr-16 text-center motion-preset-focus motion-delay-2100`}
+          className={`${caveat.className}  lg:text-3xl md:mr-16 text-center motion-preset-focus motion-delay-2000`}
         >
           Damaroo Dota Academy
         </Link>
@@ -68,7 +68,7 @@ export function Header({ className }: Props) {
                 <div
                   ref={menuRef}
                   onClick={handleCloseMenu}
-                  className="w-full flex flex-col justify-center items-center gap-8 h-lvh absolute top-0 left-0 z-10 bg-background/50 backdrop-blur-sm motion-preset-focus cursor-pointer lvh"
+                  className="w-full flex flex-col justify-center items-center gap-8 min-h-lvh absolute top-0 left-0 z-10 bg-background/50 backdrop-blur-sm motion-preset-focus cursor-pointer"
                 >
                   <X className="size-12  absolute top-4 right-2" />
                   <Navigation className="flex-col text-6xl" />
