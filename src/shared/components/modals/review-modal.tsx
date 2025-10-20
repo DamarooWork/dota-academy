@@ -9,6 +9,7 @@ import {
 import { useModalStore, ModalType } from '@/shared/store'
 import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
+import { TooltipWidget } from '@/widgets'
 
 export function ReviewModal() {
   const { isOpen, onClose, type, data } = useModalStore()
@@ -25,9 +26,11 @@ export function ReviewModal() {
           <DialogTitle className="text-2xl text-center font-bold ">
             {review?.name}
             {review?.tgLink && (
-              <Link href={review.tgLink} target="_blank">
-                <ExternalLink className="size-5 inline ml-2" />
-              </Link>
+              <TooltipWidget label="Ссылка на источник" side="top">
+                <Link href={review.tgLink} target="_blank">
+                  <ExternalLink className="size-5 inline ml-2" />
+                </Link>
+              </TooltipWidget>
             )}
           </DialogTitle>
           <DialogDescription className="text-center text-foreground text-lg">
