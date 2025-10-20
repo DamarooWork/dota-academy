@@ -42,7 +42,7 @@ export function Header({ className }: Props) {
     <header
       className={cn(
         className,
-        'sticky inset-x-0 top-0 z-50 flex items-center justify-between h-20 bg-background/85 max-w-screen w-full'
+        'fixed inset-x-0 top-0 z-50 flex items-center justify-between h-20 bg-background/85 max-w-screen w-full'
       )}
     >
       <Container className="flex items-center justify-between h-full text-2xl font-bold">
@@ -68,7 +68,7 @@ export function Header({ className }: Props) {
                 <div
                   ref={menuRef}
                   onClick={handleCloseMenu}
-                  className="w-full flex flex-col justify-center items-center gap-8 min-h-screen absolute top-0 left-0 z-10 bg-background/50 backdrop-blur-sm motion-preset-focus cursor-pointer"
+                  className="w-full flex flex-col justify-center items-center gap-8 min-h-screen absolute top-0 left-0 z-10 bg-background/50 backdrop-blur-sm motion-preset-focus cursor-pointer lvh"
                 >
                   <X className="size-12  absolute top-4 right-2" />
                   <Navigation className="flex-col text-6xl" />
