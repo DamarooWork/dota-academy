@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react'
 import { ChevronUp } from 'lucide-react'
 import { Button } from '@/shared/ui'
-import { Container } from '@/shared/components'
 import { usePathname } from 'next/navigation'
 
 export function ScrollButton() {

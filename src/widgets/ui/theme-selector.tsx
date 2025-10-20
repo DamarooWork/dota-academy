@@ -7,11 +7,11 @@ import { cn } from '@/shared/lib/utils'
 interface ThemeSelectorProps {
   className?: string
 }
-export function ThemeSelector( {className}: ThemeSelectorProps) {
+export function ThemeSelector({ className }: ThemeSelectorProps) {
   const { setTheme, theme } = useTheme()
 
   function handleClick() {
-    theme === 'dark' ? setTheme('light') : setTheme('dark')
+    theme === 'dark' ? () => setTheme('light') : () => setTheme('dark')
   }
   return (
     <Button

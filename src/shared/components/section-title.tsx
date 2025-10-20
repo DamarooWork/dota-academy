@@ -12,7 +12,7 @@ export function SectionTitle({ className, title, id }: Props) {
   return (
     <h2
       id={id}
-      className={`${caveat.className} text-5xl font-bold text-center my-8 `}
+      className={`${caveat.className} ${className} text-5xl font-bold text-center my-8 `}
     >
       {title}
     </h2>

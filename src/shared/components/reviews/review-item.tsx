@@ -11,7 +11,7 @@ interface ReviewItemProps {
   review: IReview
 }
 export default function ReviewItem({ review }: ReviewItemProps) {
-  const { onOpen, isOpen, data, onClose, type } = useModalStore()
+  const { onOpen } = useModalStore()
   const handleOpenModal = () => {
     onOpen(ModalType.REVIEW_MODAL, { review })
   }
