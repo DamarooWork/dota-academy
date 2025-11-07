@@ -14,6 +14,35 @@ const caveat = Cormorant_Infant({
 export const metadata: Metadata = {
   title: 'Damaroo Dota Academy',
   description: 'Damaroo Dota Academy: Coaching and training Dota 2 players',
+  openGraph: {
+    title: 'Damaroo Dota Academy',
+    description: 'Damaroo Dota Academy: Coaching and training Dota 2 players',
+    images: [
+      {
+        url: '/main-photo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Damaroo Dota Academy',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Damaroo Dota Academy',
+    description: 'Damaroo Dota Academy: Coaching and training Dota 2 players',
+    images: ['/main-photo.jpg'],
+  },
+  other: {
+    'vk:image': '/main-photo.jpg',
+    'vk:title': 'Damaroo Dota Academy',
+    'vk:description':
+      'Damaroo Dota Academy: Coaching and training Dota 2 players',
+    'telegram:image': '/main-photo.jpg',
+    'telegram:title': 'Damaroo Dota Academy',
+    'telegram:description':
+      'Damaroo Dota Academy: Coaching and training Dota 2 players',
+  },
 }
 
 export default function RootLayout({
